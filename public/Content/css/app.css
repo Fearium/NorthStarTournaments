@@ -202,6 +202,7 @@ body {
 #bracket, #top, #middle, #bottom, #bracket h2, #bracket h4{
     padding: 0px;
     margin: 0px;
+    text-align: center;
 }
 #bracket{
     border: 2px #682EFF solid;
@@ -212,4 +213,7 @@ body {
     height: 90px;
     width: 2px;
     display: inline-block;
+}
+#finals_title{
+    text-align: center;    
 }
