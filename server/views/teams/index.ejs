@@ -1,0 +1,36 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/navbar.ejs %>
+<main class="container">
+    <h1>Teams</h1>
+
+    <a href="/teams/add">Add a New Team</a>
+
+    <ul class="list-group">
+        <% for (var i = 0; i < teams.length; i++) { %>
+            <li class="list-group-item">
+                teamname: 
+                <a href="/teams/<%= teams[i]._id %>" title="Edit Team">
+                    <%= teams[i].teamname %>
+                </a>
+                <br />
+                player1: <%= teams[i].player1 %>
+                <br />
+                player2: <%= teams[i].player2 %>
+                <br />
+                player3: <%= teams[i].player3 %>
+                <br />
+                player4: <%= teams[i].player4 %>
+                <br />
+                player5: <%= teams[i].player5 %>
+                <br />
+                player6: <%= teams[i].player6 %>
+                <br />
+                Created: <%= teams[i].created.toDateString() %>
+                <br />
+                Updated: <%= teams[i].updated.toDateString() %>
+            </li>
+        <% } %>
+    </ul>
+</main>
+<% include ../partials/bootstrap.ejs %>
+<% include ../partials/footer.ejs %>

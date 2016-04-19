@@ -1,0 +1,68 @@
+<nav class="navbar navbar-custom">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src='/Content/images/NorthStarLogo.png' class="img-responsive" alt="NorthStar Logo"></a>
+      <a class="navbar-brand" href="/"><h2>NorthStar Tournaments</h2></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
+      <ul class="nav navbar-nav navbar-right">
+      
+        <% if(title == "Tournaments") { %>  
+            <% if(userName && userName != "admin") { %>
+                    <li class="active"><a href="/tournaments">Manage Tournaments</a></li>
+                    <li><a href="/teams">Manage Teams</a></li>
+            <% } if(userName == "admin") {%>
+                    <li><a href="/tournaments">Tournaments</a></li>
+                    <li><a href="/teams">Teams</a></li>
+                    <li><a href="/users">Users</a></li>
+        
+        <% } } else if(title == "Teams") { %>
+             <% if(userName && userName != "admin") { %>
+                    <li><a href="/tournaments">Manage Tournaments</a></li>
+                    <li class="active"><a href="/teams">Manage Teams</a></li>
+            <% } if(userName == "admin") {%>
+                    <li><a href="/tournaments">Tournaments</a></li>
+                    <li><a href="/teams">Teams</a></li>
+                    <li><a href="/users">Users</a></li>
+                    
+         <% } } else { %>
+                    <% if(userName && userName != "admin") { %>
+                    <li><a href="/tournaments">Manage Tournaments</a></li>
+                    <li><a href="/teams">Manage Teams</a></li>
+            <% } if(userName == "admin") {%>
+                    <li><a href="/tournaments">Tournaments</a></li>
+                    <li><a href="/teams">Teams</a></li>
+                    <li><a href="/users">Users</a></li>
+            
+         <% }} if(userName) { %>
+         
+            <li><i class="fa fa-user"></i> logged in as 
+            <div class="user_dropdown_list">
+              <a href="/"><%= userName %></a>
+            <div class="user_dropdown_options">
+              <ul>
+                <li>
+                <a href="/"><i class="fa fa-pencil-square-o" aria-hidden="true"> Edit</a></i>
+                </li>
+                <li>
+                <a href="/logout"><i class="fa fa-sign-out"></i> Logout</a>
+                </li>
+              </ul>
+            </div>
+            </div>
+            </li>
+         <% } else { %>
+            <li><a href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
+         <% } %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>

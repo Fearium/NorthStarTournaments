@@ -1,0 +1,1 @@
+{"version":3,"sources":["config/db.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,GAAG;IACb,KAAK,EAAC,2DAA2D;CACpE,CAAC","file":"config/db.js","sourcesContent":["module.exports = {\r\n    'url':'mongodb://user:user@ds064628.mlab.com:64628/comp2068-lab5'\r\n};"],"sourceRoot":"/source/"}

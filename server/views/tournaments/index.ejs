@@ -1,0 +1,56 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/navbar.ejs %>
+<main class="container">
+    <h1>Tournaments</h1>
+
+    <a href="/tournaments/add">Add a New Tournament</a>
+
+    <ul class="list-group">
+        <% for (var i = 0; i < tournaments.length; i++) { %>
+            <li class="list-group-item">
+                name: 
+                <a href="/tournaments/<%= tournaments[i]._id %>" title="Edit Tournament">
+                    <%= tournaments[i].name %>
+                </a>
+                <br />
+                team1: <%= tournaments[i].team1 %>
+                <br />
+                team2: <%= tournaments[i].team2 %>
+                <br />
+                team3: <%= tournaments[i].team3 %>
+                <br />
+                team4: <%= tournaments[i].team4 %>
+                <br />
+                team5: <%= tournaments[i].team5 %>
+                <br />
+                team6: <%= tournaments[i].team6 %>
+                <br />
+                team7: <%= tournaments[i].team7 %>
+                <br />
+                team8: <%= tournaments[i].team8 %>
+                <br />
+                team9: <%= tournaments[i].team9 %>
+                <br />
+                team10: <%= tournaments[i].team10 %>
+                <br />
+                team11: <%= tournaments[i].team11 %>
+                <br />
+                team12: <%= tournaments[i].team12 %>
+                <br />
+                team13: <%= tournaments[i].team13 %>
+                <br />
+                team14: <%= tournaments[i].team14 %>
+                <br />
+                team15: <%= tournaments[i].team15 %>
+                <br />
+                team16: <%= tournaments[i].team16 %>
+                <br />
+                Created: <%= tournaments[i].created.toDateString() %>
+                <br />
+                Updated: <%= tournaments[i].updated.toDateString() %>
+            </li>
+        <% } %>
+    </ul>
+</main>
+<% include ../partials/bootstrap.ejs %>
+<% include ../partials/footer.ejs %>

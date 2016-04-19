@@ -1,0 +1,37 @@
+<% include partials/header.ejs %>
+<% include partials/navbar.ejs %>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div id="home_title" class="col-md-12">
+                        <h1>The Best Tournament Brackets for Gaming</h1>
+                    </div>
+                    <div id="home_content" class="col-md-10">
+                       <img src='/Content/images/sampleTourney.png' alt="Example Tournament">
+                       <p>
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                       </p>
+                           <a href="/">
+                            <input type="submit" class="btn create_button" value="Click Here to Create Your Own Bracket!"/>
+                           </a>
+                    </div>
+                    <div id="active_tournaments" class="col-md-2">
+                        <h3>
+                        Active Tournaments
+                    </h3>
+                        <!-- This ul will eventaully be dynamic and will display an li element for each "active tournament" up to a maximum of 10 with a fixed character length. -->
+                        <ul>
+                            <% for (var i = 0; i < tournaments.length; i++) { %>
+                            <li>
+                                <a href="/" title="Edit Tournament">
+                                    <%= tournaments[i].name %>
+                                </a>
+                            </li>
+                             <% } %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+<% include partials/bootstrap.ejs %>
+<% include partials/footer.ejs %>

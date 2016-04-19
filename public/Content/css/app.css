@@ -1,0 +1,215 @@
+/* custom style sheet */
+html,body{
+    background: #051821;
+    color: #09C5E0;
+}
+
+/* NAV */
+.navbar-custom {
+background-color:#682EFF;
+color:#ffffff;
+border-radius:0;
+padding: 0px;
+margin: 0px;
+min-height:75px !important;
+}
+.navbar-custom .navbar-nav > li > a {
+color:#ffffff;
+font-size: 170%;
+height: 75px;
+padding-top: 26px;
+padding-right: 10px;
+padding-left: 10px;
+margin-right: 10px;
+margin-left: 0px;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+color: #ffffff;
+background-color:#F04408;
+}
+.navbar-custom .navbar-brand {
+color:#ffffff;
+padding: 0px;
+}
+.navbar-custom .navbar-brand img {
+width: 100%;
+padding-top: 2px;
+min-height:70px !important;
+}
+.navbar-custom .navbar-brand h2 {
+    padding: 0px 0px 0px 20px;
+}
+.user_dropdown_list{
+    position: relative;
+    display: inline-block;
+    padding-top: 17px;
+}
+.user_dropdown_list a{
+    color:#ffffff;
+    font-size: 170%;
+}
+.user_dropdown_options{
+    display: none;
+    position: absolute;
+    background-color: #682EFF;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 1px 3px;
+    z-index: 1;
+    font-size: 80%;
+}
+.user_dropdown_options ul{
+    padding: 5px;
+    list-style: none;
+}
+.user_dropdown_options a:hover, .user_dropdown_list a:hover{
+    text-decoration: none !important;
+}
+
+.user_dropdown_list:hover .user_dropdown_options {
+    display: block;
+    
+}
+
+/* ToDo OLD */
+#searchTodo, #newTodo {
+    display: block;
+    width: 30%;
+    border: 2px solid grey;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+}
+
+main{
+    margin-top: 1%;
+}
+
+/* Lists and Links */
+
+#home_content{
+    color: #ffffff;
+}
+#home_content p{
+    color: #ffffff;
+    padding: 15px;
+    width: 99%;
+    background-color: #682EFF;
+    border: 1px #682EFF solid;
+}
+#home_content img{
+    width: 99%;
+    max-height: 70%;
+    border: 1px #682EFF solid;
+}
+#active_tournaments{
+    border: 2px #682EFF solid;
+    border-radius: 30px;
+    color: #F04408;
+    max-height: 70%;
+}
+#active_tournaments ul  {
+    padding-left: 0px;
+}
+#active_tournaments ul li{
+    list-style-type: none;
+    padding: 5px;
+    font-size: 120%;
+}
+#active_tournaments a{
+    color: #09C5E0;
+}
+.collapse navbar-collapse ul{
+    min-height: 70px;
+    font-size: 150%;
+}
+
+/* Landing page button */
+.create_button { 
+  color: #ffffff; 
+  background-color: #F04408; 
+  border-color: #09C5E0; 
+} 
+ 
+.create_button:hover, 
+.create_button:focus, 
+.create_button:active, 
+.create_button.active, 
+.open .dropdown-toggle.create_button { 
+  color: #ffffff; 
+  background-color: #FF7708; 
+  border-color: #09C5E0; 
+} 
+ 
+.create_button:active, 
+.create_button.active, 
+.open .dropdown-toggle.create_button { 
+  background-image: none; 
+} 
+ 
+.create_button.disabled, 
+.create_button[disabled], 
+fieldset[disabled] .create_button, 
+.create_button.disabled:hover, 
+.create_button[disabled]:hover, 
+fieldset[disabled] .create_button:hover, 
+.create_button.disabled:focus, 
+.create_button[disabled]:focus, 
+fieldset[disabled] .create_button:focus, 
+.create_button.disabled:active, 
+.create_button[disabled]:active, 
+fieldset[disabled] .create_button:active, 
+.create_button.disabled.active, 
+.create_button[disabled].active, 
+fieldset[disabled] .create_button.active { 
+  background-color: #F04408; 
+  border-color: #09C5E0; 
+} 
+ 
+.create_button .badge { 
+  color: #F04408; 
+  background-color: #ffffff; 
+}
+
+/* footer fix */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 150px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 100px;
+  color: #682EFF;
+  
+}
+.footer a{
+    color: #09C5E0;
+}
+
+#footer_container{
+    border-top: 1px #09C5E0 solid;
+}
+
+/* Brackets */
+
+#bracket, #top, #middle, #bottom, #bracket h2, #bracket h4{
+    padding: 0px;
+    margin: 0px;
+}
+#bracket{
+    border: 2px #682EFF solid;
+    border-radius: 30px;
+}
+#vertical_line{
+    border: 2px #682EFF solid;
+    height: 90px;
+    width: 2px;
+    display: inline-block;
+}
