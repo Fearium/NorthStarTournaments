@@ -119,19 +119,23 @@ router.get('/:id', requireAuth, (req: express.Request, res: express.Response, ne
     var id = req.params.id;
 
     Tournament.findById(id, (error, Tournament) => {
+       Team.find((error, teams) => {
         if (error) {
             console.log(error);
             res.end(error);
         }
-        else {
+        else{
             //show the edit view
             res.render('tournaments/edit', {
                 title: 'Tournament Details',
                 tournament: Tournament,
+                teams: teams,
                 userName: req.user ? req.user.userName : ''
-            });
+            });     
         }
-    });
+        )};
+    });       
+     
 });
 
 // POST edit page - update the selected user
