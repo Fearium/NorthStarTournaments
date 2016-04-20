@@ -3,27 +3,31 @@
 <main class="container">
     <h1>Teams</h1>
 
-    <a href="/teams/add">Add a New Team</a>
+    <a href="/teams/add">
+        <input type="submit" class="btn create_button" value="Click Here to Add a New Team!"/>
+    <br>
+    <br>
+    </a>
 
     <ul class="list-group">
         <% for (var i = 0; i < teams.length; i++) { %>
             <li class="list-group-item">
-                teamname: 
+                Team Name: 
                 <a href="/teams/<%= teams[i]._id %>" title="Edit Team">
                     <%= teams[i].teamname %>
                 </a>
                 <br />
-                player1: <%= teams[i].player1 %>
+                player 1: <%= teams[i].player1 %>
                 <br />
-                player2: <%= teams[i].player2 %>
+                player 2: <%= teams[i].player2 %>
                 <br />
-                player3: <%= teams[i].player3 %>
+                player 3: <%= teams[i].player3 %>
                 <br />
-                player4: <%= teams[i].player4 %>
+                player 4: <%= teams[i].player4 %>
                 <br />
-                player5: <%= teams[i].player5 %>
+                player 5: <%= teams[i].player5 %>
                 <br />
-                player6: <%= teams[i].player6 %>
+                player 6: <%= teams[i].player6 %>
                 <br />
                 Created: <%= teams[i].created.toDateString() %>
                 <br />
