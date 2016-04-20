@@ -40,6 +40,26 @@ router.get('/', requireAuth, (req: express.Request, res: express.Response, next:
     });
 });
 
+router.get('/brackets/:id', requireAuth, (req: express.Request, res: express.Response, next: any) => {
+
+    var id = req.params.id;
+
+    Tournament.findById(id, (error, Tournament) => {
+        if (error) {
+            console.log(error);
+            res.end(error);
+        }
+        else {
+            //show the edit view
+            res.render('brackets/index', {
+                 title: 'Tournament',
+                tournament: Tournament,
+                userName: req.user ? req.user.username : ''
+            });
+        }
+    });
+});
+
 // GET add page - show the blank form
 router.get('/add', requireAuth, (req: express.Request, res: express.Response, next: any) => {
    Team.find((error, teams) => {

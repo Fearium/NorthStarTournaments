@@ -31,6 +31,23 @@ router.get('/', requireAuth, function (req, res, next) {
         }
     });
 });
+router.get('/brackets/:id', requireAuth, function (req, res, next) {
+    var id = req.params.id;
+    Tournament.findById(id, function (error, Tournament) {
+        if (error) {
+            console.log(error);
+            res.end(error);
+        }
+        else {
+            //show the edit view
+            res.render('brackets/index', {
+                title: 'Tournament',
+                tournament: Tournament,
+                userName: req.user ? req.user.username : ''
+            });
+        }
+    });
+});
 // GET add page - show the blank form
 router.get('/add', requireAuth, function (req, res, next) {
     Team.find(function (error, teams) {
