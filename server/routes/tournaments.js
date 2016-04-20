@@ -31,7 +31,7 @@ router.get('/', requireAuth, function (req, res, next) {
         }
     });
 });
-router.get('tournaments/brackets/:id', requireAuth, function (req, res, next) {
+router.get('/brackets/:id', requireAuth, function (req, res, next) {
     var id = req.params.id;
     Tournament.findById(id, function (error, Tournament) {
         if (error) {
