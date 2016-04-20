@@ -24,10 +24,10 @@
                                 <fieldset class="form-group">
                                     <label for="size">Tournament Size:</label>
                                     <label class="radio-inline">
-                                <input type="radio" name="size" id="size8" value="8"> 8
+                                <input type="radio" name="size" id="size8" value="8" onClick="printHours(this.form)" checked="checked"> 8
                             </label>
                                     <label class="radio-inline">
-                                <input type="radio" name="size" id="size16" value="16"> 16
+                                <input type="radio" name="size" id="size16" value="16" onClick="printHours(this.form)" checked="checked"> 16
                             </label>
                                 </fieldset>
                             </div>
@@ -148,5 +148,12 @@
             </div>
 
         </main>
+        
+        <script>
+        function myFunction(val) {
+            alert("The input value has changed. The new value is: " + val);
+        }
+</script>
+        
         <% include ../partials/bootstrap.ejs %>
             <% include ../partials/footer.ejs %>
