@@ -55,13 +55,13 @@
                     <div class="col-md-offset-8 col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.team5 %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.team6 %></h2>
                             </div>
                         </div>
                     </div>
@@ -100,26 +100,26 @@
                     <div class="col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.team3 %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.team4 %></h2>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-offset-8 col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.team7 %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.team8 %></h2>
                             </div>
                         </div>
                     </div>
@@ -203,26 +203,26 @@
                     <div class="col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.team9 %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.team10 %></h2>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-offset-8 col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.team13 %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.team14 %></h2>
                             </div>
                         </div>
                     </div>
@@ -261,31 +261,118 @@
                     <div class="col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.team11 %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.team12 %></h2>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-offset-8 col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.team15 %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.team16 %></h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
+
+            <br>
+
+            <form method="post">
+                <div class="row">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Round One</th>
+                                <th>Round Two</th>
+                                <th>Round Three</th>
+                                <th>Third Place Round</th>
+                                <th>Final Round</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a id="demo" onclick="myFunction()">
+                                        <%= tournament.team1 %>
+                                    </a> VS
+                                    <a onclick="myFunction()">
+                                        <%= tournament.team2 %>
+                                    </a>
+                                </td>
+                                <td>VS</td>
+                                <td>VS</td>
+                                <td>VS</td>
+                                <td>VS</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <%= tournament.team3 %> VS
+                                        <%= tournament.team4 %>
+                                </td>
+                                <td>VS</td>
+                                <td>VS</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <%= tournament.team5 %> VS
+                                        <%= tournament.team6 %>
+                                </td>
+                                <td>VS</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <%= tournament.team7 %> VS
+                                        <%= tournament.team8 %>
+                                </td>
+                                <td>VS</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <%= tournament.team9 %> VS
+                                        <%= tournament.team10 %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <%= tournament.team11 %> VS
+                                        <%= tournament.team12 %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <%= tournament.team13 %> VS
+                                        <%= tournament.team14 %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <%= tournament.team15 %> VS
+                                        <%= tournament.team16 %>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
         </main>
+
+        <script>
+            function myFunction() {
+                document.getElementById("demo").style.color = "red";
+            }
+
+        </script>
         <% include ../partials/bootstrap.ejs %>
             <% include ../partials/footer.ejs %>
