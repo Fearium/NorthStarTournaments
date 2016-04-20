@@ -103,20 +103,24 @@ router.post('/add', requireAuth, function (req, res, next) {
 router.get('/:id', requireAuth, function (req, res, next) {
     var id = req.params.id;
     Tournament.findById(id, function (error, Tournament) {
-        if (error) {
-            console.log(error);
-            res.end(error);
-        }
-        else {
-            //show the edit view
-            res.render('tournaments/edit', {
-                title: 'Tournament Details',
-                tournament: Tournament,
-                userName: req.user ? req.user.userName : ''
-            });
-        }
+        Team.find(function (error, teams) {
+            if (error) {
+                console.log(error);
+                res.end(error);
+            }
+            else {
+                //show the edit view
+                res.render('tournaments/edit', {
+                    title: 'Tournament Details',
+                    tournament: Tournament,
+                    teams: teams,
+                    userName: req.user ? req.user.userName : ''
+                });
+            }
+        });
     });
 });
+;
 // POST edit page - update the selected user
 router.post('/:id', requireAuth, function (req, res, next) {
     // grab the id from the url parameter
