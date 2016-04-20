@@ -3,7 +3,12 @@
 <main class="container">
     <h1>Tournaments</h1>
 
-    <a href="/tournaments/add">Add a New Tournament</a>
+    <a href="/tournaments/add">
+        <input type="submit" class="btn create_button" value="Click Here to Add a New Tournament!"/>
+    </a>
+
+    <br>
+    <br>
 
     <ul class="list-group">
         <% for (var i = 0; i < tournaments.length; i++) { %>
@@ -48,7 +53,14 @@
                 Created: <%= tournaments[i].created.toDateString() %>
                 <br />
                 Updated: <%= tournaments[i].updated.toDateString() %>
+                
+                <fieldset class="form-group text-right">
+                <a href="/brackets/<%= tournaments[i]._id %>">
+                  <button class="btn create_button">View</button>
+                </a>
+                </fieldset>
             </li>
+            
         <% } %>
     </ul>
 </main>

@@ -124,24 +124,28 @@ main{
 }
 
 /* Landing page button */
-.create_button { 
+.create_button{ 
   color: #ffffff; 
   background-color: #F04408; 
   border-color: #09C5E0; 
 } 
- 
-.create_button:hover, 
-.create_button:focus, 
-.create_button:active, 
-.create_button.active, 
+.cancel_button { 
+  color: #ffffff; 
+  background-color: #09C5E0; 
+  border-color: #F04408; 
+} 
+
+.create_button:hover, .cancel_button:hover,
+.create_button:focus, .cancel_button:focus,
+.create_button:active, .cancel_button:active, .cancel_button:hover,
 .open .dropdown-toggle.create_button { 
   color: #ffffff; 
   background-color: #FF7708; 
   border-color: #09C5E0; 
 } 
- 
+
 .create_button:active, 
-.create_button.active, 
+.cancel_button.active, 
 .open .dropdown-toggle.create_button { 
   background-image: none; 
 } 
@@ -295,4 +299,11 @@ body {
 
 .socialMediaIcons li a:hover {
     opacity: 0.5;
+}
+
+/* tournaments index */
+
+.list-group-item{
+    background-color: #051821;
+    border: 2px solid #682EFF;
 }
