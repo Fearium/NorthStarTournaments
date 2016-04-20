@@ -52,7 +52,7 @@ router.get('tournaments/brackets/:id', requireAuth, (req: express.Request, res: 
         else {
             //show the edit view
             res.render('brackets/index', {
-                 title: 'Tournament',
+                title: 'Tournament',
                 tournament: Tournament,
                 userName: req.user ? req.user.username : ''
             });
