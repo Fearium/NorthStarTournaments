@@ -40,7 +40,7 @@ router.get('/', requireAuth, (req: express.Request, res: express.Response, next:
     });
 });
 
-router.get('/brackets/:id', requireAuth, (req: express.Request, res: express.Response, next: any) => {
+router.get('tournaments/brackets/:id', requireAuth, (req: express.Request, res: express.Response, next: any) => {
 
     var id = req.params.id;
 
