@@ -1,270 +1,291 @@
 <% include ../partials/header.ejs %>
     <% include ../partials/navbar.ejs %>
         <main class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-offset-5">
-                            <!-- Dynamic title (name) pulled from DB using tournament unique ID -->
+            <form method="post">
+                <div class="row">
+                    <!-- Dynamic title (name) pulled from DB using tournament unique ID -->
+                    <div class="col-md-offset-4 col-md-4">
+                        <div id="tournament_title">
                             <h1>Tournament Title</h1>
                         </div>
                     </div>
-                    <form method="post">
-
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-offset-8 col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-
-                            <!-- <div id="vertical_line" class="col-md-offset-1 col-md-1"></div> -->
-
-                            <div class="col-md-offset-2 col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-offset-4 col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-offset-8 col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-offset-4 col-md-4">
-                                <div id="finals_title">
-                                    <h2>FINAL MATCH</h2>
-                                </div>
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <br>
-                        <br>
-
-                        <div class="row">
-                            <div class="col-md-offset-4 col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <br>
-
-                        <div class="row">
-                            <div class="col-md-offset-4 col-md-4">
-                                <div id="finals_title">
-                                    <h2>FOR THE BRONZE</h2>
-                                </div>
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-offset-8 col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-offset-2 col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-offset-4 col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-offset-8 col-md-2">
-                                <div id="bracket">
-                                    <div id="top">
-                                        <h2>test</h2>
-                                    </div>
-                                    <div id="middle">
-                                        <h4>VS</h4>
-                                    </div>
-                                    <div id="bottom">
-                                        <h2>test</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                    </form>
                 </div>
-            </div>
+                <!-- Podium -->
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6">
+                        <div id="podium">
+                            <div id="podium_title">
+                                <h2>WINNERS</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div id="silver_winner">
+                                        <h3>Silver Team</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div id="gold_winner">
+                                        <h3>Gold Team</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div id="bronze_winner">
+                                        <h3>Bronze Team</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Top Row -->
+                <div class="row">
+                    <div class="col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-8 col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Row -->
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-4 col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Third Row -->
+                <div class="row">
+                    <div class="col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-8 col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FINAL MATCH Row -->
+                <div class="row">
+                    <div class="col-md-offset-4 col-md-4">
+                        <div id="finals_title">
+                            <h2>FINAL MATCH</h2>
+                        </div>
+                        <div id="finals_bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="gold_middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <!-- Semi Finals Row -->
+                <div class="row">
+                    <div class="col-md-offset-4 col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <!-- Third Place Row -->
+                <div class="row">
+                    <div class="col-md-offset-4 col-md-4">
+                        <div id="finals_title">
+                            <h2>FOR THE BRONZE</h2>
+                        </div>
+                        <div id="bronze_bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="bronze_middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WRAP IN IF SIZE = 16 -->
+                <!-- Start of 16 Team Tournament Bracket and First Row -->
+                <div class="row">
+                    <div class="col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-8 col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Row -->
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-4 col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Third Row -->
+                <div class="row">
+                    <div class="col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-8 col-md-2">
+                        <div id="bracket">
+                            <div id="top">
+                                <h2>test</h2>
+                            </div>
+                            <div id="middle">
+                                <h4>VS</h4>
+                            </div>
+                            <div id="bottom">
+                                <h2>test</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </main>
         <% include ../partials/bootstrap.ejs %>
             <% include ../partials/footer.ejs %>

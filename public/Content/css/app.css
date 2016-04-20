@@ -198,8 +198,10 @@ body {
 }
 
 /* Brackets */
-
-#bracket, #top, #middle, #bottom, #bracket h2, #bracket h4{
+#tournament_title{
+    text-align: center;
+}
+#top, #middle, #bottom, #bracket, #bracket h2, #bracket h4, #finals_bracket, #finals_bracket h2, #finals_bracket h4, #bronze_bracket, #bronze_bracket h2, #bronze_bracket h4, #podium, #silver_winner, #gold_winner, #bronze_winner{
     padding: 0px;
     margin: 0px;
     text-align: center;
@@ -208,12 +210,89 @@ body {
     border: 2px #682EFF solid;
     border-radius: 30px;
 }
-#vertical_line{
-    border: 2px #682EFF solid;
-    height: 90px;
-    width: 2px;
-    display: inline-block;
+#finals_bracket{
+    border: 2px #FFD700 solid;
+    border-radius: 30px;
 }
-#finals_title{
-    text-align: center;    
+#bronze_bracket{
+    border: 2px #cd7f32 solid;
+    border-radius: 30px;
+}
+#finals_title, #podium_title{
+    text-align: center;
+    color: #ffffff;
+}
+#podium{
+    border: 2px #09C5E0 solid;
+    height: 100%;
+}
+#podium_title{
+    border-bottom: 2px solid #09C5E0;
+}
+#silver_winner, #gold_winner, #bronze_winner{
+    color: #ffffff;
+    height: 100%;
+}
+#silver_winner, #gold_winner{
+    border-right: 2px solid #09C5E0;
+}
+#gold_winner, #bronze_winner{
+    border-left: 2px solid #09C5E0;
+}
+#silver_winner{
+    background-color: #c0c0c0;
+}
+#gold_winner{
+    background-color: #FFD700;
+}
+#bronze_winner{
+    background-color: #cd7f32;
+}
+#silver_winner h2, #silver_winner h3, #gold_winner h2, #gold_winner h3, #bronze_winner h2, #bronze_winner h3{
+    padding: 0px;
+    margin: 0px;
+}
+#middle h4:before, #middle h4:after, #bronze_middle h4:before, #bronze_middle h4:after, #gold_middle h4:before, #gold_middle h4:after{
+    content: "";
+    vertical-align: top;
+    display: inline-block;
+    width: 42%;
+    height: 10px;
+    border-bottom: 2px solid #682EFF;
+    margin: 0 1% 0 -55%;
+}
+#middle h4:after, #bronze_middle h4:after, #gold_middle h4:after{
+    margin: 0 -55% 0 1%;
+}
+#bronze_middle h4:before, #bronze_middle h4:after, #gold_middle h4:before, #gold_middle h4:after{
+    width: 46% !important;
+}
+#bronze_middle h4:before, #bronze_middle h4:after{
+    border-bottom: 2px solid #cd7f32 !important;
+}
+#gold_middle h4:before, #gold_middle h4:after{
+    border-bottom: 2px solid #FFD700 !important;
+}
+.socialMediaIcons {
+    overflow: hidden;
+    margin-left: 0px;
+    list-style: none;
+}
+
+.socialMediaIcons li {
+    float: left;
+    margin-left: 6px;
+}
+
+.socialMediaIcons li img {
+    width: 30px;
+    height: 30px;
+}
+
+.socialMediaIcons li:first-child {
+    margin-left: 0;
+}
+
+.socialMediaIcons li a:hover {
+    opacity: 0.5;
 }
