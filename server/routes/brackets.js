@@ -11,18 +11,18 @@ function requireAuth(req, res, next) {
     }
     next();
 }
-// GET - show main users page - list all the users
-router.get('/', requireAuth, function (req, res, next) {
-    // use the Users model to query the Users collection
-    Tournament.find(function (error, tournaments) {
+router.get('/:id', requireAuth, function (req, res, next) {
+    var id = req.params.id;
+    Tournament.findById(id, function (error, tournaments) {
         if (error) {
             console.log(error);
             res.end(error);
         }
         else {
-            // no error, we found a list of users
+            //show the edit view
             res.render('brackets/index', {
-                title: 'Bracket',
+                title: 'Tournament',
+                name: name,
                 tournaments: tournaments,
                 userName: req.user ? req.user.username : ''
             });
