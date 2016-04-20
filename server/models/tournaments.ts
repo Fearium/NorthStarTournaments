@@ -19,6 +19,7 @@ var tournamentSchema = new mongoose.Schema({
     team1: {
         type: String,
         trim: true,
+        position: Number
     },
     team2: {
         type: String,

@@ -20,26 +20,26 @@ function requireAuth(req:express.Request, res:express.Response, next: any) {
     next();
 }
 
-// GET - show main users page - list all the users
-router.get('/', requireAuth, (req: express.Request, res: express.Response, next: any) => {
-   
-    // use the Users model to query the Users collection
-    Tournament.find((error, tournaments) => {
+router.get('/:id', requireAuth, (req: express.Request, res: express.Response, next: any) => {
+
+    var id = req.params.id;
+
+    Tournament.findById(id, (error, tournaments) => {
         if (error) {
             console.log(error);
             res.end(error);
         }
         else {
-            // no error, we found a list of users
+            //show the edit view
             res.render('brackets/index', {
-                title: 'Bracket',
+                 title: 'Tournament',
+                name: name,
                 tournaments: tournaments,
                 userName: req.user ? req.user.username : ''
             });
         }
     });
 });
-
 
 // make this public
 module.exports = router;
