@@ -1,7 +1,6 @@
 <% include ../partials/header.ejs %>
     <% include ../partials/navbar.ejs %>
         <main class="container">
-            <form method="post">
                 <div class="row">
                     <!-- Dynamic title (name) pulled from DB using tournament unique ID -->
                     <div class="col-md-offset-4 col-md-4">
@@ -285,7 +284,6 @@
                         </div>
                     </div>
                 </div>
-            </form>
 
             <br>
 
@@ -304,75 +302,223 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <a id="demo" onclick="myFunction()">
+                                    <a onclick="updateRound1Ax()">
                                         <%= tournament.team1 %>
                                     </a> VS
-                                    <a onclick="myFunction()">
+                                    <a onclick="updateRound1Ay()">
                                         <%= tournament.team2 %>
                                     </a>
                                 </td>
-                                <td>VS</td>
-                                <td>VS</td>
-                                <td>VS</td>
+                                <td><a id="round1a" onclick="updateRound2Ax()"></a> VS <a id="round1b" onclick="updateRound2Ay()"></a></td>
+                                
+                                <td><a id="round2a" ></a> VS <a id="round2b"></a></td>
+                                <td><a id="round3a" ></a> VS <a id="round3b"></a></td>
                                 <td>VS</td>
                             </tr>
                             <tr>
                                 <td>
-                                    <%= tournament.team3 %> VS
+                                <a onclick="updateRound1Bx()">
+                                        <%= tournament.team3 %>
+                                    </a> VS
+                                    <a onclick="updateRound1By()">
                                         <%= tournament.team4 %>
+                                    </a>
                                 </td>
-                                <td>VS</td>
+                                <td><a id="round1c" onclick="updateRound2Bx()"></a> VS <a id="round1d" onclick="updateRound2By()"></a></td>
                                 <td>VS</td>
                             </tr>
                             <tr>
                                 <td>
-                                    <%= tournament.team5 %> VS
+                                <a onclick="updateRound1Cx()">
+                                        <%= tournament.team5 %>
+                                    </a> VS
+                                    <a onclick="updateRound1Cy()">
                                         <%= tournament.team6 %>
+                                    </a>
                                 </td>
-                                <td>VS</td>
+                                <td><a id="round1e" onclick="updateRound2Cx()"></a> VS <a id="round1f" onclick="updateRound2Cy()"></a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <%= tournament.team7 %> VS
+                                <a onclick="updateRound1Dx()">
+                                        <%= tournament.team7 %>
+                                    </a> VS
+                                    <a onclick="updateRound1Dy()">
                                         <%= tournament.team8 %>
+                                    </a>
                                 </td>
-                                <td>VS</td>
+                                <td><a id="round1g" onclick="updateRound2Dx()"></a> VS <a id="round1h" onclick="updateRound2Dy()"></a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <%= tournament.team9 %> VS
+                                <a onclick="updateRound1Ex()">
+                                        <%= tournament.team9 %>
+                                    </a> VS
+                                    <a onclick="updateRound1Ey()">
                                         <%= tournament.team10 %>
+                                    </a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <%= tournament.team11 %> VS
+                                <a onclick="updateRound1Fx()">
+                                        <%= tournament.team11 %>
+                                    </a> VS
+                                    <a onclick="updateRound1Fy()">
                                         <%= tournament.team12 %>
+                                    </a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <%= tournament.team13 %> VS
+                                <a onclick="updateRound1Gx()">
+                                        <%= tournament.team13 %>
+                                    </a> VS
+                                    <a onclick="updateRound1Gy()">
                                         <%= tournament.team14 %>
+                                    </a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <%= tournament.team15 %> VS
+                                <a onclick="updateRound1Hx()">
+                                        <%= tournament.team15 %>
+                                    </a> VS
+                                    <a onclick="updateRound1Hy()">
                                         <%= tournament.team16 %>
+                                    </a>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                <input type="submit" class="btn create_button" value="TRY ME"/>
             </form>
         </main>
 
         <script>
-            function myFunction() {
-                document.getElementById("demo").style.color = "red";
+            /* round1a update */
+            function updateRound1Ax() {
+                var updateCode = "<%= tournament.team1 %>"; 
+                document.getElementById("round1a").innerHTML = updateCode;
             }
-
+            function updateRound1Ay() {
+                var updateCode = "<%= tournament.team2 %>"; 
+                document.getElementById("round1a").innerHTML = updateCode;
+            }
+            
+           /* round1b update */
+            function updateRound1Bx() {
+                var updateCode = "<%= tournament.team3 %>"; 
+                document.getElementById("round1b").innerHTML = updateCode;
+            }
+            function updateRound1By() {
+                var updateCode = "<%= tournament.team4 %>"; 
+                document.getElementById("round1b").innerHTML = updateCode;
+            }
+            
+            /* round1c update */
+            function updateRound1Cx() {
+                var updateCode = "<%= tournament.team5 %>"; 
+                document.getElementById("round1c").innerHTML = updateCode;
+            }
+            function updateRound1Cy() {
+                var updateCode = "<%= tournament.team6 %>"; 
+                document.getElementById("round1c").innerHTML = updateCode;
+            }
+            
+           /* round1d update */
+            function updateRound1Dx() {
+                var updateCode = "<%= tournament.team7 %>"; 
+                document.getElementById("round1d").innerHTML = updateCode;
+            }
+            function updateRound1Dy() {
+                var updateCode = "<%= tournament.team8 %>"; 
+                document.getElementById("round1d").innerHTML = updateCode;
+            }
+            
+            /* round1e update */
+            function updateRound1Ex() {
+                var updateCode = "<%= tournament.team9 %>"; 
+                document.getElementById("round1e").innerHTML = updateCode;
+            }
+            function updateRound1Ey() {
+                var updateCode = "<%= tournament.team10 %>"; 
+                document.getElementById("round1e").innerHTML = updateCode;
+            }
+            
+           /* round1f update */
+            function updateRound1Fx() {
+                var updateCode = "<%= tournament.team11 %>"; 
+                document.getElementById("round1f").innerHTML = updateCode;
+            }
+            function updateRound1Fy() {
+                var updateCode = "<%= tournament.team12 %>"; 
+                document.getElementById("round1f").innerHTML = updateCode;
+            }
+            
+            /* round1g update */
+            function updateRound1Gx() {
+                var updateCode = "<%= tournament.team13 %>"; 
+                document.getElementById("round1g").innerHTML = updateCode;
+            }
+            function updateRound1Gy() {
+                var updateCode = "<%= tournament.team14 %>"; 
+                document.getElementById("round1g").innerHTML = updateCode;
+            }
+            
+            /* round1h update */
+            function updateRound1Hx() {
+                var updateCode = "<%= tournament.team15 %>"; 
+                document.getElementById("round1h").innerHTML = updateCode;
+            }
+            function updateRound1Hy() {
+                var updateCode = "<%= tournament.team16 %>"; 
+                document.getElementById("round1h").innerHTML = updateCode;
+            }
+            
+            /* round 2 */
+            
+            /* round2a update */
+            function updateRound2Ax() {
+                var updateCode = "<%= tournament.round1a %>"; 
+                document.getElementById("round2a").innerHTML = updateCode;
+            }
+            function updateRound2Ay() {
+                var updateCode = "<%= tournament.team10 %>"; 
+                document.getElementById("round2b").innerHTML = updateCode;
+            }
+            
+           /* round2b update */
+            function updateRound1Fx() {
+                var updateCode = "<%= tournament.team11 %>"; 
+                document.getElementById("round1f").innerHTML = updateCode;
+            }
+            function updateRound1Fy() {
+                var updateCode = "<%= tournament.team12 %>"; 
+                document.getElementById("round1f").innerHTML = updateCode;
+            }
+            
+            /* round2c update */
+            function updateRound1Gx() {
+                var updateCode = "<%= tournament.team13 %>"; 
+                document.getElementById("round1g").innerHTML = updateCode;
+            }
+            function updateRound1Gy() {
+                var updateCode = "<%= tournament.team14 %>"; 
+                document.getElementById("round1g").innerHTML = updateCode;
+            }
+            
+            /* round2d update */
+            function updateRound1Hx() {
+                var updateCode = "<%= tournament.team15 %>"; 
+                document.getElementById("round1h").innerHTML = updateCode;
+            }
+            function updateRound1Hy() {
+                var updateCode = "<%= tournament.team16 %>"; 
+                document.getElementById("round1h").innerHTML = updateCode;
+            }
+            
         </script>
         <% include ../partials/bootstrap.ejs %>
             <% include ../partials/footer.ejs %>

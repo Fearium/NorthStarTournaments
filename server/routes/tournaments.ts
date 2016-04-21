@@ -87,7 +87,7 @@ Tournament.findOneAndUpdate(id,{
         res.end(error);
     }
     else{
-        res.redirect('back');
+        //res.redirect('back');
     }
 })
 });

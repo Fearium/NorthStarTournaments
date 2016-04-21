@@ -13,9 +13,9 @@ function requireAuth(req, res, next) {
     }
     next();
 }
-// GET - show main users page - list all the users
+// GET - show main tournaments page - list all the users
 router.get('/', requireAuth, function (req, res, next) {
-    // use the Users model to query the Users collection
+    // use the tournament model to query the tournaments collection
     Tournament.find(function (error, tournaments) {
         if (error) {
             console.log(error);
@@ -45,6 +45,34 @@ router.get('/brackets/:id', requireAuth, function (req, res, next) {
                 tournament: Tournament,
                 userName: req.user ? req.user.username : ''
             });
+        }
+    });
+});
+router.post('/brackets/:id', requireAuth, function (req, res, next) {
+    var id = req.params.id;
+    Tournament.findOneAndUpdate(id, {
+        round1a: req.body.round1a,
+        round1b: req.body.round1b,
+        round1c: req.body.round1c,
+        round1d: req.body.round1d,
+        round1e: req.body.round1e,
+        round1f: req.body.round1f,
+        round1g: req.body.round1g,
+        round1h: req.body.round1h,
+        round2a: req.body.round2a,
+        round2b: req.body.round2b,
+        round2c: req.body.round2c,
+        round2d: req.body.round2d,
+        round3a: req.body.round3a,
+        round3b: req.body.round3b,
+        round4a: req.body.round4a,
+        round4b: req.body.round4b
+    }, function (error, tournament) {
+        if (error) {
+            console.log(error);
+            res.end(error);
+        }
+        else {
         }
     });
 });
@@ -120,7 +148,6 @@ router.get('/:id', requireAuth, function (req, res, next) {
         });
     });
 });
-;
 // POST edit page - update the selected user
 router.post('/:id', requireAuth, function (req, res, next) {
     // grab the id from the url parameter
