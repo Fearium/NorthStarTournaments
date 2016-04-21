@@ -24,14 +24,15 @@
                                 <fieldset class="form-group">
                                     <label for="size">Tournament Size:</label>
                                     <label class="radio-inline">
-                                <input type="radio" name="size" id="size8" value="8" onClick="printHours(this.form)" checked="checked"> 8
+                                <input type="radio" name="size" id="size8" value="8" onClick="myFunction(8)" checked=""> 8
                             </label>
                                     <label class="radio-inline">
-                                <input type="radio" name="size" id="size16" value="16" onClick="printHours(this.form)" checked="checked"> 16
+                                <input type="radio" name="size" id="size16" value="16" onClick="myFunction(16)" checked="checked"> 16
                             </label>
                                 </fieldset>
                             </div>
                         </div>
+                        
 
                         <div class="row">
                             <div class="col-md-offset-2">
@@ -87,7 +88,7 @@
                                 </div>
 
                                 <!-- Tournament Team 16 List -->
-                                <div class="form-group">
+                                <div class="form-group" id="first">
                                     <input list="teams" name="team9" placeholder="9th Team" required>
                                     <datalist id="teams">
                                 <option value="teams">
@@ -99,7 +100,7 @@
                             </datalist>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group" id="second">
                                     <input list="teams" name="team11" placeholder="11th Team" required>
                                     <datalist id="teams">
                                 <option value="teams">
@@ -111,7 +112,7 @@
                             </datalist>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group" id="third">
                                     <input list="teams" name="team13" placeholder="13th Team" required>
                                     <datalist id="teams">
                                 <option value="teams">
@@ -123,7 +124,7 @@
                             </datalist>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group" id="fourth">
                                     <input list="teams" name="team15" placeholder="15th Team" required>
                                     <datalist id="teams">
                                 <option value="teams">
@@ -151,9 +152,22 @@
         
         <script>
         function myFunction(val) {
-            alert("The input value has changed. The new value is: " + val);
+            //alert("The input value has changed. The new value is: " + val);
+            var size = val; 
+            if(size == 8)
+                document.getElementById("first").style.visibility = "hidden";
+                document.getElementById("second").style.visibility = "hidden";
+                document.getElementById("third").style.visibility = "hidden";
+                document.getElementById("fourth").style.visibility = "hidden";
+                
+            else
+                document.getElementById("first").style.visibility = "visible";
+                document.getElementById("second").style.visibility = "visible";
+                document.getElementById("third").style.visibility = "visible";
+                document.getElementById("fourth").style.visibility = "visible";
+                
         }
 </script>
         
-        <% include ../partials/bootstrap.ejs %>
-            <% include ../partials/footer.ejs %>
+<% include ../partials/bootstrap.ejs %>
+<% include ../partials/footer.ejs %>
