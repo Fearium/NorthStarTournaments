@@ -64,7 +64,7 @@ router.post('/brackets/:id', requireAuth, (req: express.Request, res: express.Re
 
 var id = req.params.id;
 
-Tournament.findOneAndUpdate(id,{
+Tournament.findOneAndUpdate({"_id": id},{
     round1a: req.body.round1a,
     round1b: req.body.round1b,
     round1c: req.body.round1c,
