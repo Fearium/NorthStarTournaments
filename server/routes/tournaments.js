@@ -31,7 +31,7 @@ router.get('/', requireAuth, function (req, res, next) {
         }
     });
 });
-router.get('/brackets/:id', requireAuth, function (req, res, next) {
+router.get('/brackets/:id', function (req, res, next) {
     var id = req.params.id;
     Tournament.findById(id, function (error, Tournament) {
         if (error) {
@@ -67,12 +67,20 @@ router.post('/brackets/:id', requireAuth, function (req, res, next) {
         round3b: req.body.round3b,
         round4a: req.body.round4a,
         round4b: req.body.round4b
+<<<<<<< HEAD
     }, { new: true }, function (error, tournament) {
+=======
+    }, function (error, tournament) {
+>>>>>>> 3131096362a2fc3469fff2e99cf27d39735a4fad
         if (error) {
             console.log(error);
             res.end(error);
         }
         else {
+<<<<<<< HEAD
+=======
+            res.redirect('back');
+>>>>>>> 3131096362a2fc3469fff2e99cf27d39735a4fad
         }
     });
 });
