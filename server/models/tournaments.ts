@@ -83,77 +83,95 @@ var tournamentSchema = new mongoose.Schema({
     //tournament round 1 progression values
     round1a: {
         type: String,
+        default: "",
         trim: true,
     },
     round1b: {
         type: String,
+        default: "",
         trim: true,
     },
     round1c: {
         type: String,
+        default: "",
         trim: true,
     },
     round1d: {
         type: String,
+        default: "",
         trim: true,
     },
     round1e: {
         type: String,
+        default: "",
         trim: true,
     },
     round1f: {
         type: String,
+        default: "",
         trim: true,
     },
     round1g: {
         type: String,
+        default: "",
         trim: true,
     },
     round1h: {
         type: String,
+        default: "",
         trim: true,
     },
     //tournament round 2 progression values
     round2a: {
         type: String,
+        default: "",
         trim: true,
     },
     round2b: {
         type: String,
+        default: "",
         trim: true,
     },
     round2c: {
         type: String,
+        default: "",
         trim: true,
     },
     round2d: {
         type: String,
+        default: "",
         trim: true,
     },
     //tournament round 3 progression values
     round3a: {
         type: String,
+        default: "",
         trim: true,
     },
     round3b: {
         type: String,
+        default: "",
         trim: true,
     },
     //tournament round 4 progression values
     round4a: {
         type: String,
+        default: "",
         trim: true,
     },
     round4b: {
         type: String,
+        default: "",
         trim: true,
     },
      description: {
         type: String,
+        default: "",
         trim: true,
     },
     createdby: {
         type: String,
+        default: "",
         trim: true,
         required: 'Owner required'
     },
