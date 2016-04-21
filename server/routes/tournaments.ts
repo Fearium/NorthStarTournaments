@@ -81,7 +81,7 @@ Tournament.findOneAndUpdate({"_id": id},{
     round3b: req.body.round3b,
     round4a: req.body.round4a,
     round4b: req.body.round4b
-}, (error, tournament) =>{
+},{new:true}, (error, tournament) =>{
     if(error){
         console.log(error);
         res.end(error);

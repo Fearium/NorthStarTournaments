@@ -82,7 +82,7 @@ var tournamentSchema = new mongoose.Schema({
     //tournament round 1 progression values
     round1a: {
         type: String,
-        default: "",
+        default: "hello world",
         trim: true,
     },
     round1b: {

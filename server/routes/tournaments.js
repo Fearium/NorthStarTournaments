@@ -50,7 +50,7 @@ router.get('/brackets/:id', requireAuth, function (req, res, next) {
 });
 router.post('/brackets/:id', requireAuth, function (req, res, next) {
     var id = req.params.id;
-    Tournament.findOneAndUpdate(id, {
+    Tournament.findOneAndUpdate({ "_id": id }, {
         round1a: req.body.round1a,
         round1b: req.body.round1b,
         round1c: req.body.round1c,
@@ -67,7 +67,7 @@ router.post('/brackets/:id', requireAuth, function (req, res, next) {
         round3b: req.body.round3b,
         round4a: req.body.round4a,
         round4b: req.body.round4b
-    }, function (error, tournament) {
+    }, { new: true }, function (error, tournament) {
         if (error) {
             console.log(error);
             res.end(error);

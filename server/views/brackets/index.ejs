@@ -302,92 +302,100 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <a onclick="updateRound1Ax()">
-                                        <%= tournament.team1 %>
-                                    </a> VS
-                                    <a onclick="updateRound1Ay()">
-                                        <%= tournament.team2 %>
-                                    </a>
+                                    <input type="text" class="btn create_button" value="<%= tournament.team1 %>" onclick="document.getElementById('round1a').value='<%= tournament.team1 %>';"/> 
+                                    VS 
+                                    <input type="text" class="btn create_button" value="<%= tournament.team2 %>" onclick="document.getElementById('round1a').value='<%= tournament.team2 %>';"/>
+                                </td>                           
+                                <td>
+                                    <input type="text" id="round1a" name="round1a" class="btn create_button" value="<%= tournament.round1a %>" onclick="document.getElementById('round2a').value='<%= tournament.round1a %>';"/> 
+                                    VS 
+                                    <input type="text" id="round1b" name="round1b" class="btn create_button" value="<%= tournament.round1b %>" onclick="document.getElementById('round2a').value='<%= tournament.round1b %>';"/>
                                 </td>
-                                <td><a id="round1a" onclick="updateRound2Ax()"></a> VS <a id="round1b" onclick="updateRound2Ay()"></a></td>
                                 
-                                <td><a id="round2a" ></a> VS <a id="round2b"></a></td>
-                                <td><a id="round3a" ></a> VS <a id="round3b"></a></td>
-                                <td>VS</td>
-                            </tr>
-                            <tr>
                                 <td>
-                                <a onclick="updateRound1Bx()">
-                                        <%= tournament.team3 %>
-                                    </a> VS
-                                    <a onclick="updateRound1By()">
-                                        <%= tournament.team4 %>
-                                    </a>
+                                    <input type="text" id="round2a" name="round2a" class="btn create_button" value="<%= tournament.round2a %>" onclick="document.getElementById('round3a').value='<%= tournament.round2a %>';"/> 
+                                    VS 
+                                    <input type="text" id="round2b" name="round2b" class="btn create_button" value="<%= tournament.round2b %>" onclick="document.getElementById('round3a').value='<%= tournament.round2b %>';"/>
                                 </td>
-                                <td><a id="round1c" onclick="updateRound2Bx()"></a> VS <a id="round1d" onclick="updateRound2By()"></a></td>
-                                <td>VS</td>
-                            </tr>
-                            <tr>
                                 <td>
-                                <a onclick="updateRound1Cx()">
-                                        <%= tournament.team5 %>
-                                    </a> VS
-                                    <a onclick="updateRound1Cy()">
-                                        <%= tournament.team6 %>
-                                    </a>
+                                    <input type="text" id="round3a" name="round3a" class="btn create_button" value="<%= tournament.round3a %>" onclick="document.getElementById('round4a').value='<%= tournament.round3a %>';"/> 
+                                    VS 
+                                    <input type="text" id="round3b" name="round3b" class="btn create_button" value="<%= tournament.round3b %>" onclick="document.getElementById('round4a').value='<%= tournament.round3b %>';"/>
                                 </td>
-                                <td><a id="round1e" onclick="updateRound2Cx()"></a> VS <a id="round1f" onclick="updateRound2Cy()"></a></td>
-                            </tr>
-                            <tr>
                                 <td>
-                                <a onclick="updateRound1Dx()">
-                                        <%= tournament.team7 %>
-                                    </a> VS
-                                    <a onclick="updateRound1Dy()">
-                                        <%= tournament.team8 %>
-                                    </a>
-                                </td>
-                                <td><a id="round1g" onclick="updateRound2Dx()"></a> VS <a id="round1h" onclick="updateRound2Dy()"></a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                <a onclick="updateRound1Ex()">
-                                        <%= tournament.team9 %>
-                                    </a> VS
-                                    <a onclick="updateRound1Ey()">
-                                        <%= tournament.team10 %>
-                                    </a>
+                                    <input type="text" id="round3a" name="round3a" class="btn create_button" value="<%= tournament.round3a %>" onclick="document.getElementById('round4a').value='<%= tournament.round3a %>';"/> 
+                                    VS 
+                                    <input type="text" id="round3b" name="round3b" class="btn create_button" value="<%= tournament.round3b %>" onclick="document.getElementById('round4a').value='<%= tournament.round3b %>';"/>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                <a onclick="updateRound1Fx()">
-                                        <%= tournament.team11 %>
-                                    </a> VS
-                                    <a onclick="updateRound1Fy()">
-                                        <%= tournament.team12 %>
-                                    </a>
+                                    <input type="text" class="btn create_button" value="<%= tournament.team3 %>" onclick="document.getElementById('round1b').value='<%= tournament.team3 %>';"/> 
+                                    VS 
+                                    <input type="text" class="btn create_button" value="<%= tournament.team4 %>" onclick="document.getElementById('round1b').value='<%= tournament.team4 %>';"/>
+                                </td> 
+                                <td>
+                                    <input type="text" id="round1c" name="round1c" class="btn create_button" value="<%= tournament.round1c %>" onclick="document.getElementById('round2b').value='<%= tournament.round1c %>';"/> 
+                                    VS 
+                                    <input type="text" id="round1d" name="round1d" class="btn create_button" value="<%= tournament.round1d %>" onclick="document.getElementById('round2b').value='<%= tournament.round1d %>';"/>
+                                </td>
+                                <td>
+                                    <input type="text" id="round2c" name="round2c" class="btn create_button" value="<%= tournament.round2c %>" onclick="document.getElementById('round3b').value='<%= tournament.round2c %>';"/> 
+                                    VS 
+                                    <input type="text" id="round2d" name="round2d" class="btn create_button" value="<%= tournament.round2d %>" onclick="document.getElementById('round3b').value='<%= tournament.round2d %>';"/>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                <a onclick="updateRound1Gx()">
-                                        <%= tournament.team13 %>
-                                    </a> VS
-                                    <a onclick="updateRound1Gy()">
-                                        <%= tournament.team14 %>
-                                    </a>
+                                    <input type="text" class="btn create_button" value="<%= tournament.team5 %>" onclick="document.getElementById('round1c').value='<%= tournament.team5 %>';"/> 
+                                    VS 
+                                    <input type="text" class="btn create_button" value="<%= tournament.team6 %>" onclick="document.getElementById('round1c').value='<%= tournament.team6 %>';"/>
+                                </td> 
+                                <td>
+                                    <input type="text" id="round1e" name="round1e" class="btn create_button" value="<%= tournament.round1e %>" onclick="document.getElementById('round2c').value='<%= tournament.round1e %>';"/> 
+                                    VS 
+                                    <input type="text" id="round1f" name="round1f" class="btn create_button" value="<%= tournament.round1f %>" onclick="document.getElementById('round2c').value='<%= tournament.round1f %>';"/>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                <a onclick="updateRound1Hx()">
-                                        <%= tournament.team15 %>
-                                    </a> VS
-                                    <a onclick="updateRound1Hy()">
-                                        <%= tournament.team16 %>
-                                    </a>
+                                    <input type="text" class="btn create_button" value="<%= tournament.team7 %>" onclick="document.getElementById('round1d').value='<%= tournament.team7 %>';"/> 
+                                    VS 
+                                    <input type="text" class="btn create_button" value="<%= tournament.team8 %>" onclick="document.getElementById('round1d').value='<%= tournament.team8 %>';"/>
+                                </td> 
+                                <td>
+                                    <input type="text" id="round1g" name="round1g" class="btn create_button" value="<%= tournament.round1g %>" onclick="document.getElementById('round2d').value='<%= tournament.round1g %>';"/> 
+                                    VS 
+                                    <input type="text" id="round1h" name="round1h" class="btn create_button" value="<%= tournament.round1h %>" onclick="document.getElementById('round2d').value='<%= tournament.round1h %>';"/>
                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="btn create_button" value="<%= tournament.team9 %>" onclick="document.getElementById('round1e').value='<%= tournament.team9 %>';"/> 
+                                    VS 
+                                    <input type="text" class="btn create_button" value="<%= tournament.team10 %>" onclick="document.getElementById('round1e').value='<%= tournament.team10 %>';"/>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="btn create_button" value="<%= tournament.team11 %>" onclick="document.getElementById('round1f').value='<%= tournament.team11 %>';"/> 
+                                    VS 
+                                    <input type="text" class="btn create_button" value="<%= tournament.team12 %>" onclick="document.getElementById('round1f').value='<%= tournament.team12 %>';"/>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="btn create_button" value="<%= tournament.team13 %>" onclick="document.getElementById('round1g').value='<%= tournament.team13 %>';"/> 
+                                    VS 
+                                    <input type="text" class="btn create_button" value="<%= tournament.team14 %>" onclick="document.getElementById('round1g').value='<%= tournament.team14 %>';"/>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="btn create_button" value="<%= tournament.team15 %>" onclick="document.getElementById('round1h').value='<%= tournament.team15 %>';"/> 
+                                    VS 
+                                    <input type="text" class="btn create_button" value="<%= tournament.team16 %>" onclick="document.getElementById('round1h').value='<%= tournament.team16 %>';"/>
+                                </td> 
                             </tr>
                         </tbody>
                     </table>
@@ -396,129 +404,5 @@
             </form>
         </main>
 
-        <script>
-            /* round1a update */
-            function updateRound1Ax() {
-                var updateCode = "<%= tournament.team1 %>"; 
-                document.getElementById("round1a").innerHTML = updateCode;
-            }
-            function updateRound1Ay() {
-                var updateCode = "<%= tournament.team2 %>"; 
-                document.getElementById("round1a").innerHTML = updateCode;
-            }
-            
-           /* round1b update */
-            function updateRound1Bx() {
-                var updateCode = "<%= tournament.team3 %>"; 
-                document.getElementById("round1b").innerHTML = updateCode;
-            }
-            function updateRound1By() {
-                var updateCode = "<%= tournament.team4 %>"; 
-                document.getElementById("round1b").innerHTML = updateCode;
-            }
-            
-            /* round1c update */
-            function updateRound1Cx() {
-                var updateCode = "<%= tournament.team5 %>"; 
-                document.getElementById("round1c").innerHTML = updateCode;
-            }
-            function updateRound1Cy() {
-                var updateCode = "<%= tournament.team6 %>"; 
-                document.getElementById("round1c").innerHTML = updateCode;
-            }
-            
-           /* round1d update */
-            function updateRound1Dx() {
-                var updateCode = "<%= tournament.team7 %>"; 
-                document.getElementById("round1d").innerHTML = updateCode;
-            }
-            function updateRound1Dy() {
-                var updateCode = "<%= tournament.team8 %>"; 
-                document.getElementById("round1d").innerHTML = updateCode;
-            }
-            
-            /* round1e update */
-            function updateRound1Ex() {
-                var updateCode = "<%= tournament.team9 %>"; 
-                document.getElementById("round1e").innerHTML = updateCode;
-            }
-            function updateRound1Ey() {
-                var updateCode = "<%= tournament.team10 %>"; 
-                document.getElementById("round1e").innerHTML = updateCode;
-            }
-            
-           /* round1f update */
-            function updateRound1Fx() {
-                var updateCode = "<%= tournament.team11 %>"; 
-                document.getElementById("round1f").innerHTML = updateCode;
-            }
-            function updateRound1Fy() {
-                var updateCode = "<%= tournament.team12 %>"; 
-                document.getElementById("round1f").innerHTML = updateCode;
-            }
-            
-            /* round1g update */
-            function updateRound1Gx() {
-                var updateCode = "<%= tournament.team13 %>"; 
-                document.getElementById("round1g").innerHTML = updateCode;
-            }
-            function updateRound1Gy() {
-                var updateCode = "<%= tournament.team14 %>"; 
-                document.getElementById("round1g").innerHTML = updateCode;
-            }
-            
-            /* round1h update */
-            function updateRound1Hx() {
-                var updateCode = "<%= tournament.team15 %>"; 
-                document.getElementById("round1h").innerHTML = updateCode;
-            }
-            function updateRound1Hy() {
-                var updateCode = "<%= tournament.team16 %>"; 
-                document.getElementById("round1h").innerHTML = updateCode;
-            }
-            
-            /* round 2 */
-            
-            /* round2a update */
-            function updateRound2Ax() {
-                var updateCode = "<%= tournament.round1a %>"; 
-                document.getElementById("round2a").innerHTML = updateCode;
-            }
-            function updateRound2Ay() {
-                var updateCode = "<%= tournament.team10 %>"; 
-                document.getElementById("round2b").innerHTML = updateCode;
-            }
-            
-           /* round2b update */
-            function updateRound1Fx() {
-                var updateCode = "<%= tournament.team11 %>"; 
-                document.getElementById("round1f").innerHTML = updateCode;
-            }
-            function updateRound1Fy() {
-                var updateCode = "<%= tournament.team12 %>"; 
-                document.getElementById("round1f").innerHTML = updateCode;
-            }
-            
-            /* round2c update */
-            function updateRound1Gx() {
-                var updateCode = "<%= tournament.team13 %>"; 
-                document.getElementById("round1g").innerHTML = updateCode;
-            }
-            function updateRound1Gy() {
-                var updateCode = "<%= tournament.team14 %>"; 
-                document.getElementById("round1g").innerHTML = updateCode;
-            }
-            
-            /* round2d update */
-            function updateRound1Hx() {
-                var updateCode = "<%= tournament.team15 %>"; 
-                document.getElementById("round1h").innerHTML = updateCode;
-            }
-            function updateRound1Hy() {
-                var updateCode = "<%= tournament.team16 %>"; 
-                document.getElementById("round1h").innerHTML = updateCode;
-            }
-            
-        </script>
         <% include ../partials/bootstrap.ejs %>
             <% include ../partials/footer.ejs %>
