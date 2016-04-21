@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div id="gold_winner">
-                                        <h3>Gold Team</h3>
+                                        <h3><%= tournament.round4a %></h3>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -70,26 +70,26 @@
                     <div class="col-md-offset-2 col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.round1a %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.round1b %></h2>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-offset-4 col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.round1e %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.round1f %></h2>
                             </div>
                         </div>
                     </div>
@@ -131,13 +131,13 @@
                         </div>
                         <div id="finals_bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.round3a %></h2>
                             </div>
                             <div id="gold_middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.round3b %></h2>
                             </div>
                         </div>
                     </div>
@@ -150,26 +150,26 @@
                     <div class="col-md-offset-4 col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.round2a %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.round2b %></h2>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.round2c %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.round2d %></h2>
                             </div>
                         </div>
                     </div>
@@ -184,13 +184,13 @@
                         </div>
                         <div id="bronze_bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><!-- <%= tournament.round3a %>--></h2>
                             </div>
                             <div id="bronze_middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><!--<%= tournament.round3b %>--></h2>
                             </div>
                         </div>
                     </div>
@@ -231,26 +231,26 @@
                     <div class="col-md-offset-2 col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.round1c %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.round1d %></h2>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-offset-4 col-md-2">
                         <div id="bracket">
                             <div id="top">
-                                <h2>test</h2>
+                                <h2><%= tournament.round1g %></h2>
                             </div>
                             <div id="middle">
                                 <h4>VS</h4>
                             </div>
                             <div id="bottom">
-                                <h2>test</h2>
+                                <h2><%= tournament.round1h %></h2>
                             </div>
                         </div>
                     </div>
@@ -297,6 +297,7 @@
                                 <th>Round Three</th>
                                 <th>Third Place Round</th>
                                 <th>Final Round</th>
+                                <th>Winner</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -318,14 +319,17 @@
                                     <input type="text" id="round2b" name="round2b" class="btn create_button" value="<%= tournament.round2b %>" onclick="document.getElementById('round3a').value='<%= tournament.round2b %>';"/>
                                 </td>
                                 <td>
-                                    <input type="text" id="round3a" name="round3a" class="btn create_button" value="<%= tournament.round3a %>" onclick="document.getElementById('round4a').value='<%= tournament.round3a %>';"/> 
+                                   <!-- <input type="text" id="round3a" name="round3a" class="btn create_button" value="<%= tournament.round3a %>" onclick="document.getElementById('round4a').value='<%= tournament.round3a %>';"/> -->
                                     VS 
-                                    <input type="text" id="round3b" name="round3b" class="btn create_button" value="<%= tournament.round3b %>" onclick="document.getElementById('round4a').value='<%= tournament.round3b %>';"/>
+                                    <!-- <input type="text" id="round3b" name="round3b" class="btn create_button" value="<%= tournament.round3b %>" onclick="document.getElementById('round4a').value='<%= tournament.round3b %>';"/> -->
                                 </td>
                                 <td>
                                     <input type="text" id="round3a" name="round3a" class="btn create_button" value="<%= tournament.round3a %>" onclick="document.getElementById('round4a').value='<%= tournament.round3a %>';"/> 
                                     VS 
                                     <input type="text" id="round3b" name="round3b" class="btn create_button" value="<%= tournament.round3b %>" onclick="document.getElementById('round4a').value='<%= tournament.round3b %>';"/>
+                                </td>
+                                <td>
+                                    <input type="text" id="round4a" name="round4a" class="btn create_button" value="<%= tournament.round4a %>"/> 
                                 </td>
                             </tr>
                             <tr>
@@ -400,7 +404,7 @@
                         </tbody>
                     </table>
                 </div>
-                <input type="submit" class="btn create_button" value="TRY ME"/>
+                <input type="submit" class="btn create_button" value="Save"/>
             </form>
         </main>
 
