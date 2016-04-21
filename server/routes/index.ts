@@ -7,6 +7,7 @@ var router = express.Router();
 import userModel = require('../models/user');
 import User = userModel.User;
 
+//import models
 import tournamentModel = require('../models/tournaments');
 import Tournament = tournamentModel.Tournament;
 
@@ -38,14 +39,6 @@ router.get('/', (req: express.Request, res: express.Response, next: any) => {
     });
 });
 
-
-/* GET about page. */
-router.get('/about', (req: express.Request, res: express.Response, next: any) => {
-    res.render('index', { 
-        title: 'About',
-        userName: req.user ? req.user.username : '' });
-});
-
 /* GET contact page. */
 router.get('/contact', (req: express.Request, res: express.Response, next: any) => {
     req.flash('successmessage', 'Thank You. Your message has been sent.');
@@ -59,14 +52,14 @@ router.get('/contact', (req: express.Request, res: express.Response, next: any) 
 /* Email processing */
 router.post('/contact', (req: express.Request, res: express.Response, next: any) => {
     sendgrid.send({
-        to: 'tsiliopoulos@hotmail.com',
+        to: 'ryan.jameson@mygeorgian.ca',
         from: req.body.email,
         subject: 'Contact Form Submission',
-        text: "This message has been sent from the contact form at [MongoDB Demo]\r\n\r\n" +
+        text: "This message has been sent from the contact form at NorthStar Tournaments ©\r\n\r\n" +
         "Name: " + req.body.name + "\r\n\r\n" +
         "Phone: " + req.body.phone + "\r\n\r\n" +
         req.body.message,
-        html: "This message has been sent from the contact form at [MongoDB Demo]<br><br>" +
+        html: "This message has been sent from the contact form at NorthStar Tournaments ©<br><br>" +
         "<strong>Name:</strong> " + req.body.name + "<br><br>" +
         "<strong>Phone:</strong> " + req.body.phone + "<br><br>" +
         req.body.message
@@ -131,7 +124,7 @@ router.post('/reset',(req:express.Request, res: express.Response, next:any) => {
                   }
                   
                   console.log('Password Changed');
-                  res.redirect('/users');
+                  res.redirect('/login');
               });
           }
        }); 

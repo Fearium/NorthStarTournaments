@@ -19,7 +19,6 @@ var tournamentSchema = new mongoose.Schema({
     team1: {
         type: String,
         trim: true,
-        position: Number
     },
     team2: {
         type: String,
@@ -140,7 +139,7 @@ var tournamentSchema = new mongoose.Schema({
         type: String,
         trim: true,
     },
-    //tournament round 3 progression values
+    //tournament round 4 progression values
     round4a: {
         type: String,
         trim: true,

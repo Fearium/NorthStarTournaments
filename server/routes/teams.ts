@@ -8,9 +8,9 @@ import teamModel = require('../models/team');
 
 import Team = teamModel.Team;
 
-/* Utility Function to check if team is authenticated */
+/* Utility Function to check if user is authenticated */
 function requireAuth(req:express.Request, res:express.Response, next: any) {
-    // check if the team is logged in
+    // check if the user is logged in
     if (!req.isAuthenticated()) {
         return res.redirect('/login');
     }

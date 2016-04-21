@@ -20,10 +20,10 @@ function requireAuth(req:express.Request, res:express.Response, next: any) {
     next();
 }
 
-// GET - show main users page - list all the users
+// GET - show main tournaments page - list all the users
 router.get('/', requireAuth, (req: express.Request, res: express.Response, next: any) => {
    
-    // use the Users model to query the Users collection
+    // use the tournament model to query the tournaments collection
     Tournament.find((error, tournaments) => {
         if (error) {
             console.log(error);
@@ -59,6 +59,39 @@ router.get('/brackets/:id', requireAuth, (req: express.Request, res: express.Res
         }
     });
 });
+
+router.post('/brackets/:id', requireAuth, (req: express.Request, res: express.Response, next: any) => {
+
+var id = req.params.id;
+
+Tournament.findOneAndUpdate(id,{
+    round1a: req.body.round1a,
+    round1b: req.body.round1b,
+    round1c: req.body.round1c,
+    round1d: req.body.round1d,
+    round1e: req.body.round1e,
+    round1f: req.body.round1f,
+    round1g: req.body.round1g,
+    round1h: req.body.round1h,
+    round2a: req.body.round2a,
+    round2b: req.body.round2b,
+    round2c: req.body.round2c,
+    round2d: req.body.round2d,
+    round3a: req.body.round3a,
+    round3b: req.body.round3b,
+    round4a: req.body.round4a,
+    round4b: req.body.round4b
+}, (error, tournament) =>{
+    if(error){
+        console.log(error);
+        res.end(error);
+    }
+    else{
+        res.redirect('back');
+    }
+})
+});
+    
 
 // GET add page - show the blank form
 router.get('/add', requireAuth, (req: express.Request, res: express.Response, next: any) => {
@@ -133,7 +166,7 @@ router.get('/:id', requireAuth, (req: express.Request, res: express.Response, ne
                 userName: req.user ? req.user.userName : ''
             });     
         }
-        )};
+        });
     });       
      
 });
