@@ -23,7 +23,7 @@
                         <ul>
                             <% for (var i = 0; i < tournaments.length; i++) { %>
                             <li>
-                                <a href="/" title="Edit Tournament">
+                                <a href="tournaments/brackets/<%= tournaments[i]._id %>" title="Edit Tournament">
                                     <%= tournaments[i].name %>
                                 </a>
                             </li>
