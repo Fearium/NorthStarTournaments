@@ -3,8 +3,10 @@ var express = require('express');
 var router = express.Router();
 var tournamentModel = require('../models/tournaments');
 var teamModel = require('../models/team');
+var userModel = require('../models/user');
 var Tournament = tournamentModel.Tournament;
 var Team = teamModel.Team;
+var User = userModel.User;
 /* Utility Function to check if user is authenticated */
 function requireAuth(req, res, next) {
     // check if the user is logged in
@@ -34,18 +36,21 @@ router.get('/', requireAuth, function (req, res, next) {
 router.get('/brackets/:id', function (req, res, next) {
     var id = req.params.id;
     Tournament.findById(id, function (error, Tournament) {
-        if (error) {
-            console.log(error);
-            res.end(error);
-        }
-        else {
-            //show the edit view
-            res.render('brackets/index', {
-                title: 'Tournament',
-                tournament: Tournament,
-                userName: req.user ? req.user.username : ''
-            });
-        }
+        User.find(function (error, users) {
+            if (error) {
+                console.log(error);
+                res.end(error);
+            }
+            else {
+                //show the edit view
+                res.render('brackets/index', {
+                    title: 'Tournament',
+                    tournament: Tournament,
+                    users: users,
+                    userName: req.user ? req.user.username : ''
+                });
+            }
+        });
     });
 });
 router.post('/brackets/:id', requireAuth, function (req, res, next) {

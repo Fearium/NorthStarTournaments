@@ -287,6 +287,7 @@
 
             <br>
 
+            <% if(userName) {%>
             <form method="post">
                 <div class="row">
                     <table class="table table-bordered">
@@ -406,6 +407,7 @@
                 </div>
                 <input type="submit" class="btn create_button" value="Save"/>
             </form>
+             <% } %>
         </main>
 
         <% include ../partials/bootstrap.ejs %>

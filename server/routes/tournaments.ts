@@ -7,9 +7,11 @@ import mongoose = require('mongoose');
 
 import tournamentModel = require('../models/tournaments');
 import teamModel = require('../models/team');
+import userModel = require('../models/user');
 
 import Tournament = tournamentModel.Tournament;
 import Team = teamModel.Team;
+import User = userModel.User;
 
 /* Utility Function to check if user is authenticated */
 function requireAuth(req:express.Request, res:express.Response, next: any) {
@@ -45,7 +47,8 @@ router.get('/brackets/:id', (req: express.Request, res: express.Response, next: 
     var id = req.params.id;
 
     Tournament.findById(id, (error, Tournament) => {
-        if (error) {
+       User.find((error, users) => {
+             if (error) {
             console.log(error);
             res.end(error);
         }
@@ -54,9 +57,12 @@ router.get('/brackets/:id', (req: express.Request, res: express.Response, next: 
             res.render('brackets/index', {
                 title: 'Tournament',
                 tournament: Tournament,
+                users: users,
                 userName: req.user ? req.user.username : ''
             });
         }
+        })
+       
     });
 });
 
