@@ -11,7 +11,6 @@ var tournamentSchema = new mongoose.Schema({
     },
     size: {
         type: Number,
-        default: 16,
         trim: true,
         required: 'Size of tournament required'
     },
